@@ -1,0 +1,37 @@
+AllCops:
+  # Rubyのバージョンを指定
+  TargetRubyVersion: 2.5.1
+  # 除外するファイル
+  Exclude:
+    - vendor/bundle/**/*
+    - Gemfile
+    - spec/spec_helper.rb
+
+# Missing magic comment # frozen_string_literal: true. を無視
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Missing top-level class documentation comment. を無視
+Style/Documentation:
+  Enabled: false
+
+# Line is too long を無視
+Metrics/LineLength:
+  Max: 128
+
+# Block has too many lines を無視
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+# Method has too many lines を無視
+Metrics/MethodLength:
+  Max: 20
+
+# Parenthesize the param を無視
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+# Use only ascii symbols in comments. を無視
+Style/AsciiComments:
+  Enabled: false
