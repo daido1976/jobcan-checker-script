@@ -40,6 +40,12 @@ class NokogiriModifying
     h1.add_next_sibling "<h3>1977 - 1984</h3>"
     doc.to_html
   end
+
+  def wrapping_node_set
+    nodes = doc.css "h1,div"
+    nodes.wrap("<div class='container'></div>")
+    doc.to_html
+  end
 end
 
 puts NokogiriModifying.new.doc
@@ -53,3 +59,5 @@ puts '-' * 100
 puts NokogiriModifying.new.modify_nodes_and_attribute
 puts '-' * 100
 puts NokogiriModifying.new.creating_new_nodes
+puts '-' * 100
+puts NokogiriModifying.new.wrapping_node_set
