@@ -1,7 +1,7 @@
 require 'open-uri'
 require 'nokogiri'
 
-class NokogiriDemo
+class NokogiriModifying
   attr_reader :doc, :h1, :div
 
   def initialize
@@ -37,12 +37,12 @@ class NokogiriDemo
   end
 end
 
-puts NokogiriDemo.new.doc
+puts NokogiriModifying.new.doc
 puts '-' * 100
-puts NokogiriDemo.new.changing_text_contents
+puts NokogiriModifying.new.changing_text_contents
 puts '-' * 100
-puts NokogiriDemo.new.assigns_parent
+puts NokogiriModifying.new.assigns_parent
 puts '-' * 100
-puts NokogiriDemo.new.add_next_sibling
+puts NokogiriModifying.new.add_next_sibling
 puts '-' * 100
-puts NokogiriDemo.new.modify_nodes_and_attribute
+puts NokogiriModifying.new.modify_nodes_and_attribute
