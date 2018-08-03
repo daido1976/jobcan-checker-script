@@ -35,6 +35,11 @@ class NokogiriModifying
     h1['class'] = 'show-title'
     doc.to_html
   end
+
+  def creating_new_nodes
+    h1.add_next_sibling "<h3>1977 - 1984</h3>"
+    doc.to_html
+  end
 end
 
 puts NokogiriModifying.new.doc
@@ -46,3 +51,5 @@ puts '-' * 100
 puts NokogiriModifying.new.add_next_sibling
 puts '-' * 100
 puts NokogiriModifying.new.modify_nodes_and_attribute
+puts '-' * 100
+puts NokogiriModifying.new.creating_new_nodes
