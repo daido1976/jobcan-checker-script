@@ -29,6 +29,12 @@ class NokogiriDemo
     div.add_next_sibling(h1)
     doc.to_html
   end
+
+  def modify_nodes_and_attribute
+    h1.name = 'h2'
+    h1['class'] = 'show-title'
+    doc.to_html
+  end
 end
 
 puts NokogiriDemo.new.doc
@@ -38,3 +44,5 @@ puts '-' * 100
 puts NokogiriDemo.new.assigns_parent
 puts '-' * 100
 puts NokogiriDemo.new.add_next_sibling
+puts '-' * 100
+puts NokogiriDemo.new.modify_nodes_and_attribute
