@@ -1,5 +1,3 @@
-# pure-ruby-sandbox
+# jobcan-checker-script
 
-Sandbox for pure ruby.
-
-You can play in the sandbox anytime.
+This script checks the jobcan for me.

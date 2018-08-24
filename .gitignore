@@ -44,6 +44,9 @@ Temporary Items
 # Used by dotenv library to load environment variables.
 # .env
 
+# Used by direnv library to load environment variables.
+.envrc
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history
