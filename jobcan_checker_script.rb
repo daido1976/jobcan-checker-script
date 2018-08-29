@@ -54,8 +54,4 @@ crawler = Crawler::Jobcan.new
 crawler.login
 crawler.visit_attendance_page
 
-if ARGV.first == 'current_difference'
-  puts crawler.current_difference.to_time
-else
-  puts '今日も頑張ろうな'
-end
+puts crawler.current_difference.to_time
