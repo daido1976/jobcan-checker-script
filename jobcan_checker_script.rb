@@ -27,6 +27,10 @@ module Crawler
        worked_hours - (worked_days * 8).to_f
     end
 
+    def difference
+      worked_hours - ((worked_days - 1) * 8).to_f
+    end
+
     private
 
     # return [Float]
@@ -54,4 +58,8 @@ crawler = Crawler::Jobcan.new
 crawler.login
 crawler.visit_attendance_page
 
-puts crawler.current_difference.to_time
+if ARGV.first == 'current_difference'
+  puts crawler.current_difference.to_time
+else
+  puts crawler.difference.to_time
+end
