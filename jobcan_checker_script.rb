@@ -23,10 +23,12 @@ module Crawler
       click_on '出勤簿'
     end
 
+    # 出勤日当日の午後以降に確認する用
     def current_difference
        worked_hours - (worked_days * 8).to_f
     end
 
+    # 出勤日当日の朝や休日などに確認する用
     def difference
       worked_hours - ((worked_days - 1) * 8).to_f
     end
@@ -58,7 +60,7 @@ crawler = Crawler::Jobcan.new
 crawler.login
 crawler.visit_attendance_page
 
-if ARGV.first == 'current_difference'
+if ARGV.first == 'cd'
   puts crawler.current_difference.to_time
 else
   puts crawler.difference.to_time
