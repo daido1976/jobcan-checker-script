@@ -42,7 +42,7 @@ Temporary Items
 /tmp/
 
 # Used by dotenv library to load environment variables.
-# .env
+.env
 
 # Used by direnv library to load environment variables.
 .envrc
