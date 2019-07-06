@@ -1,19 +1,20 @@
-# coding: utf-8
-
 require 'capybara'
 require 'capybara/dsl'
 require 'selenium-webdriver'
 require 'pry'
 
-Capybara.default_driver = :selenium_chrome_headless
-Capybara.register_driver :selenium_chrome_headless do |app|
-  browser_options = ::Selenium::WebDriver::Chrome::Options.new()
-  browser_options.args << '--headless'
-  browser_options.args << '--no-sandbox'
-  browser_options.args << '--disable-gpu'
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: browser_options)
-end
 Capybara.app_host = ENV['BASE_URL']
+Capybara.default_driver = :selenium_chrome_headless
+# see https://stackoverflow.com/questions/53073411/selenium-webdriverexceptionchrome-failed-to-start-crashed-as-google-chrome-is
+chrome_options = { args: %w[headless disable-gpu --no-sandbox] }
+
+Capybara.register_driver :selenium_chrome_headless do |app|
+  Capybara::Selenium::Driver.new(
+    app,
+    browser: :chrome,
+    desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(chrome_options: chrome_options),
+    )
+end
 
 module Crawler
   class Jobcan
