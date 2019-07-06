@@ -1,8 +1,0 @@
-version: '2.1'
-
-services:
-  jobcan-checker-script:
-    image: jobcan-checker-script
-    build: .
-    ports:
-      - 3000:3000
