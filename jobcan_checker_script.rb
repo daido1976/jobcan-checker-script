@@ -70,7 +70,7 @@ crawler = Crawler::Jobcan.new
 crawler.login
 crawler.visit_attendance_page
 
-if ARGV.first == 'cd'
+if ARGV.first == 'cd' || ENV['ARGV'] == 'cd'
   puts crawler.current_difference.to_time
 else
   puts crawler.difference.to_time
