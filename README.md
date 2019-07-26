@@ -4,8 +4,9 @@ This script outputs how much overtime work this month for jobcan.
 
 ## Usage
 
+Docker is required.
+
 ```sh
-# docker is required.
 $ docker build -t my-app .
 # 出勤日当日の朝や休日などに確認する用
 $ docker run --env-file .env -it --rm my-app
