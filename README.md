@@ -15,6 +15,16 @@ $ docker run --env-file .env -e ARGV=cd -it --rm my-app
 // e.g. 1 時間 2 分
 ```
 
+If you want to run this script directly in `bash`.
+
+```sh
+$ docker run --env-file .env -it --rm my-app /bin/bash
+root@hogehoge:/usr/src/app# ruby jobcan_checker_script.rb
+// e.g. 9 時間 2 分
+root@hogehoge:/usr/src/app# ruby jobcan_checker_script.rb cd
+// e.g. 1 時間 2 分
+```
+
 If you want to mount your updates.
 
 ```sh
