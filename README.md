@@ -1,6 +1,6 @@
 # jobcan-checker-script
 
-This script outputs how much overtime work this month.
+This script outputs how much overtime work this month for jobcan.
 
 ## Usage
 
