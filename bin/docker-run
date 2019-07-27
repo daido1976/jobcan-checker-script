@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# -ge 1 ]; then
+  echo 'Running script to check on the afternoon of work day...'
+  docker run --env-file .env -e ARGV=$1 -it --rm jobcan-checker
+else
+  echo 'Running script to check on the morning of workday or holiday...'
+  docker run --env-file .env -it --rm jobcan-checker
+fi
+
+exit 0
