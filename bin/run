@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bundle exec ruby jobcan_checker_script.rb $1
