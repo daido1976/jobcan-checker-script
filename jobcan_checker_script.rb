@@ -3,7 +3,7 @@ require 'capybara/dsl'
 require 'selenium-webdriver'
 require 'pry'
 
-Capybara.app_host = ENV['BASE_URL']
+Capybara.app_host = 'https://id.jobcan.jp'
 Capybara.default_driver = :selenium_chrome_headless
 # see https://stackoverflow.com/questions/53073411/selenium-webdriverexceptionchrome-failed-to-start-crashed-as-google-chrome-is
 chrome_options = { args: %w[headless disable-gpu --no-sandbox] }
