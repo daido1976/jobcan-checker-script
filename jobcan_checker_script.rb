@@ -12,8 +12,8 @@ Capybara.register_driver :selenium_chrome_headless do |app|
   Capybara::Selenium::Driver.new(
     app,
     browser: :chrome,
-    desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(chrome_options: chrome_options),
-    )
+    desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(chrome_options: chrome_options)
+  )
 end
 
 module Crawler
@@ -35,7 +35,7 @@ module Crawler
 
     # 出勤日当日の午後以降に確認する用
     def current_difference
-       worked_hours - (worked_days * 8).to_f
+      worked_hours - (worked_days * 8).to_f
     end
 
     # 出勤日当日の朝や休日などに確認する用
@@ -62,7 +62,7 @@ end
 
 class Float
   def to_time
-    "#{self.to_i} 時間 #{((self - self.to_i) * 60).round} 分"
+    "#{to_i} 時間 #{((self - to_i) * 60).round} 分"
   end
 end
 
