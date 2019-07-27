@@ -26,4 +26,4 @@ RUN mkdir -p /opt/chromedriver-$CHROMEDRIVER_VERSION && \
     echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list && \
     apt-get update && apt-get install -y google-chrome-stable
 
-CMD ["ruby", "./jobcan_checker_script.rb"]
+CMD ["bundle", "exec", "ruby", "./jobcan_checker_script.rb"]
