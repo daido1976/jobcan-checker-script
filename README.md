@@ -6,7 +6,7 @@ This script outputs how much overtime work this month for jobcan.
 
 Please set environment variables.
 
-```
+```sh
 # rename file from .env.skeleton to .env
 MY_EMAIL=hoge@fuga.jp
 MY_PASSWORD=hogefuga
