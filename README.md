@@ -24,11 +24,11 @@ If you want to run this script directly in `bash`.
 $ docker run --env-file .env -it --rm jobcan-checker /bin/bash
 
 # 出勤日当日の朝や休日などに確認する用
-root@hogehoge:/usr/src/app# ruby jobcan_checker_script.rb
+root@hogehoge:/usr/src/app# bundle exec ruby jobcan_checker_script.rb
 // e.g. 9 時間 2 分
 
 # 出勤日当日の午後以降に確認する用
-root@hogehoge:/usr/src/app# ruby jobcan_checker_script.rb cd
+root@hogehoge:/usr/src/app# bundle exec ruby jobcan_checker_script.rb cd
 // e.g. 1 時間 2 分
 ```
 
