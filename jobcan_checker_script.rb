@@ -28,7 +28,9 @@ module Crawler
     end
 
     def visit_attendance_page
-      click_on '勤怠'
+      sleep 3
+      # '勤怠' の間に空白が入るようになったのでこうしている
+      find('a', text: '勤怠', exact_text: false).click
       switch_to_window { title == "JOBCAN MyPage: #{ENV['MY_NAME']}" }
       click_on '出勤簿'
     end
