@@ -1,5 +1,10 @@
 # jobcan-checker-script
 
+This script no longer works due to changes in the jobcan UI.
+Please refer to the newly created https://github.com/daido1976/jobcan-overtime.
+
+---
+
 This script outputs how much overtime work this month for jobcan.
 
 ## Usage
